@@ -1,11 +1,72 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Poppins&family=Rubik:ital@1&display=swap');
 
-/* coomon styles or utilities */
-body{
+/* common styles or utilities */
+nav{
+    height: 94px; 
+    background-color: #562EFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0 180px;
+}
+.nav-bar{
+    display: flex;
+    color:white;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+.nav-bar .logo {  
+    display: flex;
+    align-items: center;
+}
+.nav-bar .logo img{
+    height: 52px;
+    width: 40px;
+    margin-right: 20px;
+}
+.nav-bar .logo p{
+    font-size: 24px;
+    font-weight: 700;
+}
+.nav-bar .menu {
+    display: flex;
+    align-items: center;
+}
+.nav-bar .menu ul{
+    justify-content: center;
+    list-style: none;
+    margin-right: 20px;
+    align-items: center;
+}
+.nav-bar .menu ul li a{
+    float:right;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;   
+    margin-left: 20px;
+    text-decoration: none; 
+    text-align: center;
     
-font-family: 'Poppins', sans-serif;
-background-color: #F3F1FF;
+}
+.nav-bar .menu  img{
+    float: right;
+    width: 51px;
+    height: 51px;  
+}
+footer {
+    color: white;
+    height: 150px; 
+    background-color: #562EFF;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding-top: 80px;
+}
+
+body{   
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3F1FF;
 }
 main{
     display: flex;
@@ -91,11 +152,11 @@ color: #562EFF;
     display: flex;
     justify-content: space-between;
 }
-.fas-star{
+.fa-star{
     font-size: 12px;
 }
 .fa-star.filled{
-    color: #ffc014;
+    color: #ff1414;
 }
 .fa-star.empty{
     color: #aeaeae;
@@ -103,17 +164,17 @@ color: #562EFF;
     background-color: #FFE4E8;
     color:#FF4A60;
 }
-/* Media Quaries */
-/* --------------
+/* media
    Mobile Device 
----------------*/
-@media only screen and (max-width:688px) {
+---------------*/ 
+@media only screen and (max-width:688px) {    
+    .players, .blogs, .courses{
+    grid-template-columns:repeat(1, 1fr);
+    }
     .container{
         width: 100%;
     }
-    .players, .blogs, .courses{
-        grid-template-columns:repeat(1, 1fr)  
-    }
+
     .player, .blog{
         flex-direction: column;
     }
@@ -124,7 +185,7 @@ color: #562EFF;
     .container{
         width: 100%;
     }
-    .player, .courses{
+    .players, .courses{
         
         grid-template-columns:repeat(2, 1fr);
     }
